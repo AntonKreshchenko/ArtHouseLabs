@@ -1,0 +1,212 @@
+.service
+    background-color: $corporate-color
+    &-text
+        margin: 28px 0 20px
+        text-align: center
+        p
+            @include highlighted-text
+            line-height: 30px
+            b
+                font-weight: 700
+    .line
+        position: relative
+        &:before
+            content: ''
+            position: absolute
+            top: -10px
+            left: -5px
+            height: 128%
+            width: 1px
+            background-color: $black
+
+.portfolio
+    padding: 50px 0 100px
+    background: url(../img/bg-portfolio.jpg) no-repeat center center
+    background-size: cover
+    &-title
+        text-align: center
+        margin-bottom: 40px
+        h2
+            @include title
+    &-blocks
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+        &_item
+            flex: 0 1 330px
+            margin: 0 0 20px 20px
+            box-shadow: 0px 0px 10px 1px rgba(0,156,99,1)
+            position: relative
+            z-index: 1
+            cursor: pointer
+            transition: 0.3s
+            img
+                max-width: 330px
+            button
+                @include btn (160px, 60px)
+                position: absolute
+                transition: opacity .3s ease-in-out
+                opacity: 0
+                top: 50%
+                margin-top: -30px
+                left: 50%
+                margin-left: -80px
+                z-index: 3
+            &:before
+                content: ''
+                transition: opacity .3s ease-in-out
+                opacity: 0
+                position: absolute
+                width: 100%
+                height: 100%
+                top: 0
+                left: 0
+                background: rgba(0,0,0, .5)
+                z-index: 2
+            &:hover
+                box-shadow: 0px 0px 10px 3px rgba(0,156,99,1)
+                button
+                    opacity: 1
+                &:before
+                    opacity: 1
+    &-btn
+        margin-top: 50px
+        text-align: center
+        button
+            @include btn (260px, 70px)
+
+.data
+    background-color: $corporate-color
+    &-text
+        margin: 28px 0 20px
+        text-align: center
+        p
+            @include highlighted-text
+            line-height: 30px
+            b
+                font-weight: 700
+    .long-text 
+        min-width: 370px
+    
+.partners
+    margin-top: 100px
+    &-title
+        text-align: center
+        h3
+            @include title
+            color: $corporate-color
+    &-banner
+        margin-top: 50px
+        img
+            margin: 0 auto
+    &-feedback
+        margin-top: 80px
+        &_title
+            text-align: center
+            margin-bottom: 40px
+            h3
+              @include title
+              color: $corporate-color 
+        &_slider
+            .feedback-slide
+                display: flex !important
+                align-items: flex-start
+                .person
+                    flex: 1 1 30%
+                    text-align: center
+                    img
+                        margin: 5px auto 0
+                        max-width: 180px
+                    p
+                        margin-top: 10px
+                        @include sub-title($corporate-color )
+                .person-description
+                    flex: 2 2 70%
+                    p
+                        @include text
+                        line-height: 25px
+            .slick-arrow-left
+                position: absolute
+                top: calc(35%)
+                cursor: pointer
+                z-index: 100
+            .slick-arrow-right
+                position: absolute
+                top: calc(36%)
+                right: -50px
+                cursor: pointer
+                z-index: 100
+
+.explanation
+    margin: 60px 0
+    background-color: $corporate-color
+    &-title
+        text-align: center
+        padding: 20px 0
+        h2
+            @include title
+            color: $black
+
+.team
+    &-title
+        text-align: center
+        margin-bottom: 20px
+        h3
+            @include title
+            color: $corporate-color
+    &-description
+        margin-bottom: 40px
+        p
+            @include text
+            line-height: 22px
+            letter-spacing: 1.4
+    &-slider
+        width: 90%
+        &_slide
+            max-width: 250px
+            text-align: center
+            transition: .3s
+            img
+                max-width: 200px
+                margin: 0 auto
+            h6
+                @include text
+                font-weight: 700
+                margin: 10px 0 5px
+            p
+                @include text
+                font-size: 16px
+        .slick-center
+            img
+                max-width: 250px
+        .slick-arrow-left
+            position: absolute
+            top: calc(35%)
+            cursor: pointer
+            z-index: 100
+        .slick-arrow-right
+            position: absolute
+            top: calc(36%)
+            right: -50px
+            cursor: pointer
+            z-index: 100
+
+.contact
+    margin: 60px 0 180px
+    padding-top: 40px
+    border-top: 2px solid $black
+    &-title
+        text-align: center
+        margin-bottom: 50px
+        h3
+            @include title
+            color: $corporate-color
+    &-left_btn
+        button
+            @include btn (250px, 70px)
+            background: #1990ea
+    &-right_btn
+        text-align: right
+        button
+            @include btn (250px, 70px)
+            background: #1990ea

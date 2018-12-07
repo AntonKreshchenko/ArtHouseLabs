@@ -1,0 +1,29 @@
+footer
+    background-color: $corporate-color
+    padding-bottom: 10px
+    .footer-logo
+        margin-top: -24px
+        img
+            max-width: 100%
+    .footer-contacts
+        padding-top: 20px
+        p
+           @include footer-text
+           margin-bottom: 10px 
+        a
+            display: block
+            @include footer-text
+            font-size: 18px
+            &:nth-of-type(1)
+                margin-bottom: 5px
+                font-family: Arial
+    .footer-social
+        display: flex
+        justify-content: flex-end
+        padding-top: 30px
+        a
+            margin-right: 10px
+            &:nth-of-type(1)
+                padding-top: 2px
+                img
+                    max-width: 20px

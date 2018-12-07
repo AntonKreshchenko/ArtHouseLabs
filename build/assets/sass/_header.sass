@@ -1,0 +1,38 @@
+header
+    background-color: $corporate-color
+    padding: 10px 0 15px
+    .header-logo
+        img
+            max-width: 250px
+    .header-nav
+        padding-top: 26px
+        nav
+            ul
+                li
+                    display: inline-block
+                    &:nth-of-type(n+2)
+                        margin-left: 20px
+                    a
+                        @include nav
+                        transition: 0.3s
+                        &:hover
+                            color: $hover-text
+    .header-btn
+        text-align: center
+        padding-top: 14px
+        button
+            width: 140px
+            height: 40px
+            text-align: center
+            border: 1px solid $white
+            background: transparent
+            border-radius: 20px
+            @include contact-btn
+            &:hover
+                transition: .5s
+                color: $black
+                border: 1px solid $white
+            &:before
+                background: $white
+                border: 1px solid $white
+                border-radius: 20px

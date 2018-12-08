@@ -66,29 +66,98 @@ header .header-btn button:before {
   border-radius: 20px;
 }
 
+header .menu-btn {
+  display: none;
+}
+
 .screen-wrapper {
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.video {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 100%;
-          flex: 1 1 100%;
-}
-
-.video img {
-  max-width: 100%;
   height: 100%;
 }
 
+@media (max-width: 1199px) {
+  header .header-logo img {
+    max-width: 200px;
+  }
+  header .header-nav {
+    padding-top: 20px;
+  }
+  header .header-nav nav ul {
+    margin-left: -80px;
+  }
+  header .header-nav nav ul li a {
+    font-size: 18px;
+  }
+  header .header-btn {
+    padding-top: 8px;
+  }
+}
+
+@media (max-width: 991px) {
+  header .header-nav {
+    display: none;
+  }
+  header .header-btn {
+    display: none;
+  }
+  header .menu-btn {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: relative;
+  }
+  header .menu-btn span {
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+    left: 50%;
+    margin-left: -10px;
+    width: 20px;
+    height: 2px;
+    background-color: #000000;
+  }
+  header .menu-btn span:before, header .menu-btn span:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+    left: 50%;
+    margin-left: -10px;
+    width: 20px;
+    height: 2px;
+    background-color: #000000;
+  }
+  header .menu-btn span:before {
+    -webkit-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  header .menu-btn span:after {
+    -webkit-transform: translateY(5px);
+        -ms-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+}
+
+.works-slider {
+  margin-bottom: 0 !important;
+}
+
+.works-slider_slide {
+  max-height: 781px;
+}
+
+.works-slider_slide a img {
+  max-width: 100%;
+}
+
+.works-slider .slick-dots {
+  bottom: 0;
+}
+
 .service {
+  margin-top: -3px;
   background-color: #009c63;
 }
 
@@ -521,6 +590,24 @@ header .header-btn button:before {
   -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
   background: #1990ea;
+}
+
+@media (max-width: 1199px) {
+  .service-text p {
+    font-size: 22px;
+  }
+  .data-text p {
+    font-size: 22px;
+  }
+  .data .long-text {
+    min-width: 100%;
+  }
+  .partners-feedback_slider .feedback-slide .person-description p {
+    max-width: 90%;
+  }
+  .partners-feedback .slick-arrow-right {
+    right: 0px;
+  }
 }
 
 footer {

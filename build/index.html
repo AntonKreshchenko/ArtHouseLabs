@@ -28,7 +28,7 @@
         <header>
              <div class="container">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-4">
                         <div class="header-logo">
                             <img src="assets/img/Logo.png" alt="Logo">
                         </div><!-- /.header-logo -->
@@ -46,17 +46,36 @@
                             </nav>
                         </div><!-- /.header-nav -->
                     </div><!-- /.col-md-6 --> 
-                    <div class="col-md-2">
+                    <div class="col-2">
                         <div class="header-btn">
                             <a href=""><button class="hvr-shutter-out-horizontal">Contact us</button></a>
                         </div><!-- /.header-btn -->
+                        <div class="menu-btn">
+                            <a href="#">
+                                <span></span>
+                            </a>
+                        </div><!-- /.menu-btn -->
                     </div><!-- /.col-md-2 -->
                 </div><!-- /.row -->
             </div><!-- /.container -->
         </header>
-        <div class="video">
-            <img src="assets/img/video.jpg" alt="video">
-        </div><!-- /.video -->
+        <div class="works-slider">
+            <div class="works-slider_slide">
+                <a href="">
+                    <img src="assets/img/slider/21.jpg" alt="Cartoon/Casual">
+                </a>
+            </div><!-- /.works-slider_slide -->
+            <div class="works-slider_slide">
+                <a href="">
+                    <img src="assets/img/slider/Islands_Window.jpg" alt="Casino/Slots">
+                </a>
+            </div><!-- /.works-slider_slide -->
+            <div class="works-slider_slide">
+                <a href="">
+                   <img src="assets/img/slider/hard_surface-26.jpg" alt="Photoreal/Stylized">
+                </a>
+            </div><!-- /.works-slider_slide -->
+        </div><!-- /.works-slider -->
     </div><!-- /.screen-wrapper -->
     <main>
         <div class="service">
@@ -319,6 +338,15 @@
     <script src="assets/libs/js/bootstrap.min.js"></script>
     <script src="assets/libs/slick/slick.js"></script>
     <script>
+        $('.works-slider').slick({
+            dots: true,
+            arrows: false,
+            autoplay: true,
+            adaptiveHeight: true,
+            slidesToShow: 1,
+            slidesToScroll: 1
+        });
+
         $('.partners-feedback_slider').slick({
             dots: false,
 			arrows: true,

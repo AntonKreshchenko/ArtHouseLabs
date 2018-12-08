@@ -8,6 +8,7 @@
             line-height: 30px
             b
                 font-weight: 700
+                text-shadow: 0px 0px 0 rgb(217,217,217),1px 1px 0 rgb(193,193,193),2px 2px 0 rgb(168,168,168), 3px 3px 0 rgb(143,143,143),4px 4px 3px rgba(0,0,0,0.6),4px 4px 1px rgba(0,0,0,0.5),0px 0px 3px rgba(0,0,0,.2)
     .line
         position: relative
         &:before
@@ -17,7 +18,7 @@
             left: -5px
             height: 128%
             width: 1px
-            background-color: $black
+            background-color: $white
 
 .portfolio
     padding: 50px 0 100px
@@ -85,6 +86,7 @@
             line-height: 30px
             b
                 font-weight: 700
+                text-shadow: 0px 0px 0 rgb(217,217,217),1px 1px 0 rgb(193,193,193),2px 2px 0 rgb(168,168,168), 3px 3px 0 rgb(143,143,143),4px 4px 3px rgba(0,0,0,0.6),4px 4px 1px rgba(0,0,0,0.5),0px 0px 3px rgba(0,0,0,.2)
     .long-text 
         min-width: 370px
     
@@ -145,7 +147,7 @@
         padding: 20px 0
         h2
             @include title
-            color: $black
+            color: $white
 
 .team
     &-title
@@ -202,11 +204,12 @@
             @include title
             color: $corporate-color
     &-left_btn
+        text-align: center
         button
-            @include btn (250px, 70px)
+            @include btn (270px, 80px)
             background: #1990ea
     &-right_btn
-        text-align: right
+        text-align: center
         button
-            @include btn (250px, 70px)
+            @include btn (270px, 80px)
             background: #1990ea

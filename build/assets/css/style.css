@@ -99,7 +99,7 @@ header .header-btn button:before {
 
 .service-text p {
   font-family: "Raleway", sans-serif;
-  color: #000000;
+  color: #ffffff;
   font-size: 24px;
   text-transform: uppercase;
   line-height: 30px;
@@ -107,6 +107,7 @@ header .header-btn button:before {
 
 .service-text p b {
   font-weight: 700;
+  text-shadow: 0px 0px 0 #d9d9d9, 1px 1px 0 #c1c1c1, 2px 2px 0 #a8a8a8, 3px 3px 0 #8f8f8f, 4px 4px 3px rgba(0, 0, 0, 0.6), 4px 4px 1px rgba(0, 0, 0, 0.5), 0px 0px 3px rgba(0, 0, 0, 0.2);
 }
 
 .service .line {
@@ -120,7 +121,7 @@ header .header-btn button:before {
   left: -5px;
   height: 128%;
   width: 1px;
-  background-color: #000000;
+  background-color: #ffffff;
 }
 
 .portfolio {
@@ -254,7 +255,7 @@ header .header-btn button:before {
 
 .data-text p {
   font-family: "Raleway", sans-serif;
-  color: #000000;
+  color: #ffffff;
   font-size: 24px;
   text-transform: uppercase;
   line-height: 30px;
@@ -262,6 +263,7 @@ header .header-btn button:before {
 
 .data-text p b {
   font-weight: 700;
+  text-shadow: 0px 0px 0 #d9d9d9, 1px 1px 0 #c1c1c1, 2px 2px 0 #a8a8a8, 3px 3px 0 #8f8f8f, 4px 4px 3px rgba(0, 0, 0, 0.6), 4px 4px 1px rgba(0, 0, 0, 0.5), 0px 0px 3px rgba(0, 0, 0, 0.2);
 }
 
 .data .long-text {
@@ -383,7 +385,7 @@ header .header-btn button:before {
   color: #ffffff;
   font-weight: 700;
   letter-spacing: 1.5px;
-  color: #000000;
+  color: #ffffff;
 }
 
 .team-title {
@@ -483,9 +485,13 @@ header .header-btn button:before {
   color: #009c63;
 }
 
+.contact-left_btn {
+  text-align: center;
+}
+
 .contact-left_btn button {
-  width: 250px;
-  height: 70px;
+  width: 270px;
+  height: 80px;
   font-family: "Raleway", sans-serif;
   color: #ffffff;
   background: #009c63;
@@ -499,12 +505,12 @@ header .header-btn button:before {
 }
 
 .contact-right_btn {
-  text-align: right;
+  text-align: center;
 }
 
 .contact-right_btn button {
-  width: 250px;
-  height: 70px;
+  width: 270px;
+  height: 80px;
   font-family: "Raleway", sans-serif;
   color: #ffffff;
   background: #009c63;
@@ -520,10 +526,6 @@ header .header-btn button:before {
 footer {
   background-color: #009c63;
   padding-bottom: 10px;
-}
-
-footer .footer-logo {
-  margin-top: -24px;
 }
 
 footer .footer-logo img {

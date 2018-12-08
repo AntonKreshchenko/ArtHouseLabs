@@ -61,22 +61,78 @@ header
 @media (max-width: 991px)
     header
         .header-nav
-            display: none
+            position: fixed
+            top: 0
+            right: 0
+            height: 100vh
+            z-index: 998
+            background-color: $corporate-color
+            width: 40%
+            padding: 20px
+            border-left: 2px solid $black
+            transform: translateX(100%)
+            transition: .5s
+            &_active
+                transform: translateX(0%)
+            nav
+                display: flex
+                align-items: center
+                justify-content: center
+                height: 100%
+                ul
+                    margin-left: 0
+                    text-align: center
+                    li
+                        display: block
+                        &:nth-of-type(n+2)
+                            margin-left: 0
+                            margin-top: 20px
+                        a
+                            font-size: 22px
         .header-btn
             display: none
         .menu-btn
             display: block
+            margin-left: auto
             width: 50px
             height: 50px
             background-color: $white
             border-radius: 50%
             position: relative
+            z-index: 999
+            transition: .5s
             span
                 @include menu-btn
                 &:before, &:after
                     content: ''
                     @include menu-btn
+                    transition: .5s
                 &:before
                     transform: translateY(-5px)
                 &:after
                     transform: translateY(5px)
+            &_active
+                position: fixed
+                top: 10px
+                right: 114px
+                transform: translateX(100%)
+                span
+                    height: 0
+                    &:before
+                        transform: rotate(45deg)
+                    &:after
+                        transform: rotate(-45deg)
+
+@media (max-width: 767px)
+    header
+        .header-nav
+            width: 50%
+
+@media (max-width: 575px)
+    header
+        .header-nav
+            width: 70%
+        .menu-btn
+            &_active
+                right: 15px
+                transform: translateX(0%)

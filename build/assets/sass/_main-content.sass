@@ -247,3 +247,93 @@
                             max-width: 90%
             .slick-arrow-right
                 right: 0px
+
+@media (max-width: 991px)
+    .service
+        .line
+            &:before
+                display: none
+        .line-tablet
+            &:before
+                content: ''
+                display: block
+                position: absolute
+                top: -10px
+                left: -5px
+                height: 128%
+                width: 1px
+                background-color: $white
+
+    .portfolio
+        &-blocks
+            &_item
+                flex: 0 1 250px
+                img
+                    max-width: 250px
+    
+    .partners
+        &-banner
+            img
+                max-width: 100%
+
+    .partners
+        &-feedback
+            &_slider
+                .slick-arrow-left
+                    left: -20px
+
+@media (max-width: 767px)
+    .partners
+        &-feedback
+            &_slider
+                .feedback-slide
+                    .person
+                        margin-right: 15px
+                    .person-description
+                        p
+                            line-height: 22px  
+    
+    .team
+        &-slider
+            &_slide
+                max-width: 100%
+            .slick-arrow-left
+                left: -20px
+            .slick-arrow-left
+                right: -20px
+
+    .contact
+        &-left_btn
+            margin-bottom: 50px
+
+@media (max-width: 575px)
+    .service
+        padding-bottom: 20px
+        &-text
+            margin: 20px 0 0
+        .line-tablet
+            &:before
+                display: none
+
+    .portfolio
+        &-blocks
+            &_item
+                margin-left: 0
+
+    .partners
+        &-feedback
+            &_slider
+                .feedback-slide
+                    display: block !important
+                    .person
+                        margin: 0 0 20px 0
+                    .person-description
+                        text-align: center
+                        p
+                            max-width: 100%
+
+@media (max-width: 400px)
+    .explanation
+        &-title
+            h2
+                font-size: 36px

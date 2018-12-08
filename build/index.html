@@ -28,12 +28,12 @@
         <header>
              <div class="container">
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col-4 col-lg-4 order-1 order-lg-1">
                         <div class="header-logo">
                             <img src="assets/img/Logo.png" alt="Logo">
                         </div><!-- /.header-logo -->
                     </div><!-- /.col-md-4 -->
-                    <div class="col-md-6">
+                    <div class="col-lg-6 order-3 order-lg-2">
                         <div class="header-nav">
                             <nav>
                                 <ul>
@@ -46,7 +46,7 @@
                             </nav>
                         </div><!-- /.header-nav -->
                     </div><!-- /.col-md-6 --> 
-                    <div class="col-2">
+                    <div class="col-8 col-lg-2 order-2 order-lg-3">
                         <div class="header-btn">
                             <a href=""><button class="hvr-shutter-out-horizontal">Contact us</button></a>
                         </div><!-- /.header-btn -->
@@ -81,30 +81,30 @@
         <div class="service">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-sm-6 col-lg-3">
                         <div class="service-text">
                             <p>2D/3D Art <br>
                             <b>Design</b></p>
                         </div><!-- /.service-text -->
-                    </div><!-- /.col-md-3 -->
-                    <div class="col-md-3">
-                        <div class="service-text line">
+                    </div><!-- /.col-lg-3 -->
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="service-text line line-tablet">
                            <p>2D/3D Art <br>
                             <b>Animation</b></p>
                         </div><!-- /.service-text -->
-                    </div><!-- /.col-md-3 -->
-                    <div class="col-md-3">
+                    </div><!-- /.col-lg-3 -->
+                    <div class="col-sm-6 col-lg-3">
                         <div class="service-text line">
                             <p>FULL CYCLE GAME <br>
                             <b>DEVELOPMENT</b></p>
                         </div><!-- /.service-text -->
-                    </div><!-- /.col-md-3 -->
-                    <div class="col-md-3">
-                        <div class="service-text line">
+                    </div><!-- /.col-lg-3 -->
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="service-text line line-tablet">
                             <p>Marketing <br>
                             <b>Advertising</b></p>
                         </div><!-- /.service-text -->
-                    </div><!-- /.col-md-3 -->
+                    </div><!-- /.col-lg-3 -->
                 </div><!-- /.row -->
             </div><!-- /.container -->
         </div><!-- /.service -->
@@ -337,6 +337,9 @@
 	<script>window.jQuery || document.write('<script src="assets/libs/js/jquery-3.3.1.min"><\/script>')</script>
     <script src="assets/libs/js/bootstrap.min.js"></script>
     <script src="assets/libs/slick/slick.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+
     <script>
         $('.works-slider').slick({
             dots: true,
@@ -355,7 +358,16 @@
   			slidesToScroll: 1,
             infinite: false,
             prevArrow: '<img src="assets/img/icons/prev-arrow.png">',
-  			nextArrow: '<img src="assets/img/icons/next-arrow.png">',
+            nextArrow: '<img src="assets/img/icons/next-arrow.png">',
+            responsive: [
+                {
+                breakpoint: 575,
+                settings: {
+                    dots: true,
+			        arrows: false,
+                }
+            },
+            ]
         });
 
         $('.team-slider').slick({
@@ -364,7 +376,30 @@
             centerMode: true,
             slidesToShow: 3,
             prevArrow: '<img src="assets/img/icons/prev-arrow.png">',
-  			nextArrow: '<img src="assets/img/icons/next-arrow.png">',
+            nextArrow: '<img src="assets/img/icons/next-arrow.png">',
+            responsive: [
+                {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1
+                }
+            },
+            {
+                breakpoint: 575,
+                settings: {
+                    slidesToShow: 1,
+                    dots: true,
+                    arrows: false,
+                    centerMode: false,
+                }
+            },
+            ]
         });
     </script>
 </body>

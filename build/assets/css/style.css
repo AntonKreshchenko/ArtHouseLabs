@@ -70,6 +70,10 @@ header .menu-btn {
   display: none;
 }
 
+header .tablet {
+  display: none;
+}
+
 .screen-wrapper {
   height: 100%;
 }
@@ -141,8 +145,14 @@ header .menu-btn {
   header .header-nav nav ul li a {
     font-size: 22px;
   }
-  header .header-btn {
+  header .desktop {
     display: none;
+  }
+  header .tablet {
+    display: block;
+  }
+  header .header-btn {
+    margin-top: 25px;
   }
   header .menu-btn {
     display: block;

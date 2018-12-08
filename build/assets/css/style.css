@@ -21,7 +21,7 @@ header .header-nav nav ul li:nth-of-type(n+2) {
 
 header .header-nav nav ul li a {
   font-family: "Raleway", sans-serif;
-  color: #000000;
+  color: #ffffff;
   font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
@@ -537,7 +537,7 @@ footer .footer-contacts {
 footer .footer-contacts p {
   font-size: 16px;
   font-family: "Raleway", sans-serif;
-  color: #000000;
+  color: #ffffff;
   margin-bottom: 10px;
 }
 
@@ -545,7 +545,7 @@ footer .footer-contacts a {
   display: block;
   font-size: 16px;
   font-family: "Raleway", sans-serif;
-  color: #000000;
+  color: #ffffff;
   font-size: 18px;
 }
 

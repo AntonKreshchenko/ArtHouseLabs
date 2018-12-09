@@ -246,10 +246,6 @@ header .tablet {
   margin-bottom: 0 !important;
 }
 
-.works-slider_slide {
-  max-height: 781px;
-}
-
 .works-slider_slide a img {
   max-width: 100%;
 }

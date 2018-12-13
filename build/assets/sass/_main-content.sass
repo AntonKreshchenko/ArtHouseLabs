@@ -54,7 +54,7 @@
             img
                 max-width: 330px
             button
-                @include btn (160px, 60px)
+                @include btn (180px, 60px)
                 position: absolute
                 transition: opacity .3s ease-in-out
                 opacity: 0
@@ -84,7 +84,7 @@
         margin-top: 50px
         text-align: center
         button
-            @include btn (260px, 70px)
+            @include btn (240px, 60px)
 
 .data
     background-color: $corporate-color
@@ -233,12 +233,12 @@
             padding: 10px 20px
         button
             width: 180px
-            height: 50px
+            height: 60px
             margin: 0 auto
             text-align: center
             border: 1px solid $white
             background: transparent
-            border-radius: 20px
+            border-radius: 25px
             @include contact-btn
             font-size: 22px
             &:hover
@@ -248,7 +248,7 @@
             &:before
                 background: $white
                 border: 1px solid $white
-                border-radius: 18px
+                border-radius: 23px
 
 .contacts
     &-title
@@ -261,8 +261,9 @@
             @include title
             color: $corporate-color
     &-info
-        max-width: 175px
+        max-width: 190px
         margin: 0 auto
+        text-align: center
         p
             @include text
             font-size: 28px
@@ -270,7 +271,8 @@
             span
                 font-weight: 700
         small
-            font-size: 26px
+            font-family: $muli
+            font-size: 24px
     &-mail
         text-align: center
         margin: 40px 0

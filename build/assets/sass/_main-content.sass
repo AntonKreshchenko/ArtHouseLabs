@@ -46,7 +46,7 @@
         &_item
             flex: 0 1 330px
             margin: 0 0 20px 20px
-            box-shadow: 0px 0px 10px 1px rgba(0,156,99,1)
+            box-shadow: 0px 0px 10px 1px $shadow-color
             position: relative
             z-index: 1
             cursor: pointer
@@ -75,7 +75,7 @@
                 background: rgba(0,0,0, .5)
                 z-index: 2
             &:hover
-                box-shadow: 0px 0px 10px 3px rgba(0,156,99,1)
+                box-shadow: 0px 0px 10px 3px $shadow-color
                 button
                     opacity: 1
                 &:before
@@ -171,7 +171,7 @@
         margin-bottom: 40px
         p
             @include text
-            line-height: 22px
+            line-height: 25px
             letter-spacing: 1.4
     &-slider
         width: 90%
@@ -204,26 +204,99 @@
             cursor: pointer
             z-index: 100
 
-.contact
-    margin: 60px 0 180px
-    padding-top: 40px
-    border-top: 2px solid $black
+.question
+    margin: 60px 0
+    padding: 40px 0
+    background-color: $corporate-color
     &-title
         text-align: center
-        margin-bottom: 50px
+        margin-bottom: 40px
+        h3
+            @include title
+    &-form
+        text-align: center
+        input, textarea
+            @include form-text
+            display: block
+            &::-webkit-input-placeholder
+                color: $form-text
+            &::-moz-placeholder
+                color: $form-text
+            &:-moz-placeholder
+                color: $form-text
+            &:-ms-input-placeholder
+                color: $form-text
+        input
+            @include form-lines(620px, 50px)
+        textarea
+            @include form-lines(620px, 150px)
+            padding: 10px 20px
+        button
+            width: 180px
+            height: 50px
+            margin: 0 auto
+            text-align: center
+            border: 1px solid $white
+            background: transparent
+            border-radius: 20px
+            @include contact-btn
+            font-size: 22px
+            &:hover
+                transition: .5s
+                color: $black
+                border: 1px solid $white
+            &:before
+                background: $white
+                border: 1px solid $white
+                border-radius: 18px
+
+.contacts
+    &-title
+        max-width: 240px
+        margin: 0 auto 30px
+        text-align: center
+        padding-bottom: 20px
+        border-bottom: 1px dotted $form-text
         h3
             @include title
             color: $corporate-color
-    &-left_btn
+    &-info
+        max-width: 175px
+        margin: 0 auto
+        p
+            @include text
+            font-size: 28px
+            margin-bottom: 10px
+            span
+                font-weight: 700
+        small
+            font-size: 26px
+    &-mail
         text-align: center
-        button
-            @include btn (270px, 80px)
-            background: #1990ea
-    &-right_btn
-        text-align: center
-        button
-            @include btn (270px, 80px)
-            background: #1990ea
+        margin: 40px 0
+        padding-left: 42px
+        a
+            @include text
+            font-size: 26px
+            color: $form-text
+            position: relative
+            transition: all .3s ease-in-out
+            &:before
+                content: ''
+                position: absolute
+                width: 32px
+                height: 32px
+                left: -42px
+                opacity: .4
+                background: url(../img/icons/mail.png)
+                transition: opacity .3s ease-in-out
+            &:hover
+                color: $black
+                &:before
+                    opacity: 1
+
+
+    
 
 @media (max-width: 1199px)
     .service
@@ -302,9 +375,10 @@
             .slick-arrow-left
                 right: -20px
 
-    .contact
-        &-left_btn
-            margin-bottom: 50px
+    .question
+        &-form
+            input, textarea
+                width: 100%
 
 @media (max-width: 575px)
     .service
@@ -337,3 +411,10 @@
         &-title
             h2
                 font-size: 36px
+
+    .contacts
+        &-mail
+            a
+                font-size: 22px
+                &:before
+                    top: -2px

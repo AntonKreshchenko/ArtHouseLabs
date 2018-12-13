@@ -269,6 +269,7 @@ header .tablet {
   color: #ffffff;
   font-size: 24px;
   text-transform: uppercase;
+  font-weight: 700;
   line-height: 30px;
 }
 
@@ -326,8 +327,8 @@ header .tablet {
       -ms-flex: 0 1 330px;
           flex: 0 1 330px;
   margin: 0 0 20px 20px;
-  -webkit-box-shadow: 0px 0px 10px 1px #009c63;
-          box-shadow: 0px 0px 10px 1px #009c63;
+  -webkit-box-shadow: 0px 0px 10px 1px #295980;
+          box-shadow: 0px 0px 10px 1px #295980;
   position: relative;
   z-index: 1;
   cursor: pointer;
@@ -349,7 +350,7 @@ header .tablet {
   font-weight: 700;
   font-size: 24px;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 40px;
   -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
   position: absolute;
@@ -380,8 +381,8 @@ header .tablet {
 }
 
 .portfolio-blocks_item:hover {
-  -webkit-box-shadow: 0px 0px 10px 3px #009c63;
-          box-shadow: 0px 0px 10px 3px #009c63;
+  -webkit-box-shadow: 0px 0px 10px 3px #295980;
+          box-shadow: 0px 0px 10px 3px #295980;
 }
 
 .portfolio-blocks_item:hover button {
@@ -406,7 +407,7 @@ header .tablet {
   font-weight: 700;
   font-size: 24px;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 40px;
   -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
 }
@@ -425,6 +426,7 @@ header .tablet {
   color: #ffffff;
   font-size: 24px;
   text-transform: uppercase;
+  font-weight: 700;
   line-height: 30px;
 }
 
@@ -581,7 +583,7 @@ header .tablet {
   font-size: 18px;
   font-family: "Raleway", sans-serif;
   color: #000000;
-  line-height: 22px;
+  line-height: 25px;
   letter-spacing: 1.4;
 }
 
@@ -636,18 +638,109 @@ header .tablet {
   z-index: 100;
 }
 
-.contact {
-  margin: 60px 0 180px;
-  padding-top: 40px;
-  border-top: 2px solid #000000;
+.question {
+  margin: 60px 0;
+  padding: 40px 0;
+  background-color: #009c63;
 }
 
-.contact-title {
+.question-title {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
-.contact-title h3 {
+.question-title h3 {
+  font-size: 48px;
+  font-family: "Raleway", sans-serif;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.question-form {
+  text-align: center;
+}
+
+.question-form input, .question-form textarea {
+  font-size: 18px;
+  font-family: "Raleway", sans-serif;
+  color: #acadad;
+  display: block;
+}
+
+.question-form input::-webkit-input-placeholder, .question-form textarea::-webkit-input-placeholder {
+  color: #acadad;
+}
+
+.question-form input::-moz-placeholder, .question-form textarea::-moz-placeholder {
+  color: #acadad;
+}
+
+.question-form input:-moz-placeholder, .question-form textarea:-moz-placeholder {
+  color: #acadad;
+}
+
+.question-form input:-ms-input-placeholder, .question-form textarea:-ms-input-placeholder {
+  color: #acadad;
+}
+
+.question-form input {
+  width: 620px;
+  height: 50px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin: 0 auto 20px;
+  padding: 0 20px;
+}
+
+.question-form textarea {
+  width: 620px;
+  height: 150px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin: 0 auto 20px;
+  padding: 0 20px;
+  padding: 10px 20px;
+}
+
+.question-form button {
+  width: 180px;
+  height: 50px;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid #ffffff;
+  background: transparent;
+  border-radius: 20px;
+  font-family: "Raleway", sans-serif;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 16px;
+  font-size: 22px;
+}
+
+.question-form button:hover {
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+  color: #000000;
+  border: 1px solid #ffffff;
+}
+
+.question-form button:before {
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 18px;
+}
+
+.contacts-title {
+  max-width: 240px;
+  margin: 0 auto 30px;
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 1px dotted #acadad;
+}
+
+.contacts-title h3 {
   font-size: 48px;
   font-family: "Raleway", sans-serif;
   color: #ffffff;
@@ -656,42 +749,64 @@ header .tablet {
   color: #009c63;
 }
 
-.contact-left_btn {
-  text-align: center;
+.contacts-info {
+  max-width: 175px;
+  margin: 0 auto;
 }
 
-.contact-left_btn button {
-  width: 270px;
-  height: 80px;
+.contacts-info p {
+  font-size: 18px;
   font-family: "Raleway", sans-serif;
-  color: #ffffff;
-  background: #009c63;
+  color: #000000;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.contacts-info p span {
   font-weight: 700;
-  font-size: 24px;
-  text-align: center;
-  border-radius: 10px;
-  -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
-  background: #1990ea;
 }
 
-.contact-right_btn {
-  text-align: center;
+.contacts-info small {
+  font-size: 26px;
 }
 
-.contact-right_btn button {
-  width: 270px;
-  height: 80px;
+.contacts-mail {
+  text-align: center;
+  margin: 40px 0;
+  padding-left: 42px;
+}
+
+.contacts-mail a {
+  font-size: 18px;
   font-family: "Raleway", sans-serif;
-  color: #ffffff;
-  background: #009c63;
-  font-weight: 700;
-  font-size: 24px;
-  text-align: center;
-  border-radius: 10px;
-  -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
-  background: #1990ea;
+  color: #000000;
+  font-size: 26px;
+  color: #acadad;
+  position: relative;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.contacts-mail a:before {
+  content: '';
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  left: -42px;
+  opacity: .4;
+  background: url(../img/icons/mail.png);
+  -webkit-transition: opacity .3s ease-in-out;
+  -o-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
+}
+
+.contacts-mail a:hover {
+  color: #000000;
+}
+
+.contacts-mail a:hover:before {
+  opacity: 1;
 }
 
 @media (max-width: 1199px) {
@@ -758,8 +873,8 @@ header .tablet {
   .team-slider .slick-arrow-left {
     right: -20px;
   }
-  .contact-left_btn {
-    margin-bottom: 50px;
+  .question-form input, .question-form textarea {
+    width: 100%;
   }
 }
 
@@ -794,6 +909,12 @@ header .tablet {
   .explanation-title h2 {
     font-size: 36px;
   }
+  .contacts-mail a {
+    font-size: 22px;
+  }
+  .contacts-mail a:before {
+    top: -2px;
+  }
 }
 
 footer {
@@ -811,37 +932,36 @@ footer .footer-logo img {
 }
 
 footer .footer-contacts {
-  padding-top: 20px;
+  text-align: center;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 footer .footer-contacts p {
   font-size: 16px;
   font-family: "Raleway", sans-serif;
   color: #ffffff;
-  margin-bottom: 10px;
-}
-
-footer .footer-contacts a {
-  display: block;
-  font-size: 16px;
-  font-family: "Raleway", sans-serif;
-  color: #ffffff;
-  font-size: 18px;
-}
-
-footer .footer-contacts a:nth-of-type(1) {
-  margin-bottom: 5px;
-  font-family: Arial;
 }
 
 footer .footer-social {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding-top: 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 footer .footer-social a {
@@ -857,7 +977,8 @@ footer .footer-social a img {
     margin: 0 auto;
   }
   footer .footer-contacts {
-    text-align: center;
+    height: auto;
+    margin: 20px 0;
   }
   footer .footer-social {
     -webkit-box-pack: center;

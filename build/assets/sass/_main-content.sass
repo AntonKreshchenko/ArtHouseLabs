@@ -5,30 +5,35 @@
             img
                 max-width: 100%
     .slick-dots
-        bottom: 0
+        bottom: 20px
+        li
+            button
+                &:before
+                    font-size: 10px
     
 .service
     margin-top: -3px
     background-color: $corporate-color
     &-text
-        margin: 28px 0 20px
+        margin: 25px 0
         text-align: center
         p
             @include highlighted-text
             line-height: 30px
+            font-weight: 400
             b
                 font-weight: 700
-                text-shadow: 0px 0px 0 rgb(217,217,217),1px 1px 0 rgb(193,193,193),2px 2px 0 rgb(168,168,168), 3px 3px 0 rgb(143,143,143),4px 4px 3px rgba(0,0,0,0.6),4px 4px 1px rgba(0,0,0,0.5),0px 0px 3px rgba(0,0,0,.2)
     .line
         position: relative
         &:before
             content: ''
             position: absolute
             top: -10px
-            left: -5px
+            left: -15px
             height: 128%
             width: 1px
             background-color: $white
+
 
 .portfolio
     padding: 50px 0 100px
@@ -85,6 +90,9 @@
         text-align: center
         button
             @include btn (240px, 60px)
+            transition: .3s
+            &:hover
+                transform: scale(0.9)
 
 .data
     background-color: $corporate-color
@@ -94,9 +102,10 @@
         p
             @include highlighted-text
             line-height: 30px
+            font-weight: 400
             b
                 font-weight: 700
-                text-shadow: 0px 0px 0 rgb(217,217,217),1px 1px 0 rgb(193,193,193),2px 2px 0 rgb(168,168,168), 3px 3px 0 rgb(143,143,143),4px 4px 3px rgba(0,0,0,0.6),4px 4px 1px rgba(0,0,0,0.5),0px 0px 3px rgba(0,0,0,.2)
+                //text-shadow: 0px 0px 0 rgb(217,217,217),1px 1px 0 rgb(193,193,193),2px 2px 0 rgb(168,168,168), 3px 3px 0 rgb(143,143,143),4px 4px 3px rgba(0,0,0,0.6),4px 4px 1px rgba(0,0,0,0.5),0px 0px 3px rgba(0,0,0,.2)
     .long-text 
         min-width: 370px
     
@@ -159,8 +168,24 @@
             @include title
             color: $white
 
+.about
+    margin-top: 60px
+    &-description
+        h3
+            @include title
+            text-align: center
+            color: $corporate-color 
+            margin-bottom: 20px
+        p
+            @include text
+            line-height: 25px
+            letter-spacing: 1.4
+            &:nth-of-type(n+2)
+                margin-top: 20px
+
+
 .team
-    padding-top: 60px
+    padding-top: 80px
     &-title
         text-align: center
         margin-bottom: 20px
@@ -228,13 +253,18 @@
                 color: $form-text
         input
             @include form-lines(620px, 50px)
+        p
+            @include text
+            color: $cauntion-color
+            display: none
+            margin-top: 10px
         textarea
             @include form-lines(620px, 150px)
             padding: 10px 20px
         button
             width: 180px
-            height: 60px
-            margin: 0 auto
+            height: 50px
+            margin: 30px auto 0
             text-align: center
             border: 1px solid $white
             background: transparent
@@ -242,13 +272,9 @@
             @include contact-btn
             font-size: 22px
             &:hover
-                transition: .5s
+                transition: .3s
                 color: $black
-                border: 1px solid $white
-            &:before
-                background: $white
-                border: 1px solid $white
-                border-radius: 23px
+                background-color: $white
 
 .contacts
     &-title
@@ -304,12 +330,16 @@
     .service
         &-text
             p
-                font-size: 22px
+                font-size: 18px
+        .line
+            &:last-of-type
+                &:before
+                    left: -15px      
 
     .data
         &-text
             p
-                font-size: 22px
+                font-size: 18px
         .long-text
             min-width: 100%
 
@@ -325,6 +355,9 @@
 
 @media (max-width: 991px)
     .service
+        &-text
+            p
+                font-size: 22px
         .line
             &:before
                 display: none
@@ -345,6 +378,11 @@
                 flex: 0 1 250px
                 img
                     max-width: 250px
+
+    .data
+        &-text
+            p
+                font-size: 22px
     
     .partners
         &-banner
@@ -383,6 +421,14 @@
                 width: 100%
 
 @media (max-width: 575px)
+    .works-slider
+        .slick-dots
+            bottom: 10px
+            li
+                button
+                    &:before
+                        font-size: 6px
+    
     .service
         padding-bottom: 20px
         &-text

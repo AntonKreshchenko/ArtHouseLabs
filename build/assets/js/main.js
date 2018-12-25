@@ -13,3 +13,41 @@ $('a[href*="#"]').click(function() {
     }, 400);
     return false;
 });
+
+//form validation
+
+let name = document.getElementById('name');
+let mail = document.getElementById('email');
+let text = document.getElementById('text');
+let btn = document.getElementById('button');
+
+name.addEventListener('keyup', function () {
+    let val = /\d|\W/.test(this.value);
+    cauntion(this, val);
+});
+
+mail.addEventListener('keyup', function () {
+    let val = /^[a-zA-Z-.]+@[a-z]+\.[a-z]{2,3}$/.test(this.value);
+    cauntion(this, !val);
+});
+
+text.addEventListener('keyup', function () {
+    let val = /<\w*>/.test(this.value);
+    cauntion(this, val);
+});
+
+function cauntion(elem, val) {
+    if (val){
+        btn.disabled = true;
+        elem.style.border = '1px solid #ff0000';
+        elem.nextElementSibling.style.display = 'block';
+    } else {
+        btn.disabled = false;
+        elem.style.border = '1px solid transparent';
+        elem.nextElementSibling.style.display = 'none';
+    }
+    if(elem.value === ''){
+        elem.style.border = '1px solid transparent';
+        elem.nextElementSibling.style.display = 'none';
+    }
+}

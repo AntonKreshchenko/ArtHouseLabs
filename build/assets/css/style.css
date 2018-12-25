@@ -35,7 +35,7 @@ header .header-nav nav ul li a:hover {
 }
 
 header .header-btn {
-  text-align: center;
+  text-align: right;
   padding-top: 14px;
 }
 
@@ -251,7 +251,11 @@ header .tablet {
 }
 
 .works-slider .slick-dots {
-  bottom: 0;
+  bottom: 20px;
+}
+
+.works-slider .slick-dots li button:before {
+  font-size: 10px;
 }
 
 .service {
@@ -260,7 +264,7 @@ header .tablet {
 }
 
 .service-text {
-  margin: 28px 0 20px;
+  margin: 25px 0;
   text-align: center;
 }
 
@@ -271,11 +275,11 @@ header .tablet {
   text-transform: uppercase;
   font-weight: 700;
   line-height: 30px;
+  font-weight: 400;
 }
 
 .service-text p b {
   font-weight: 700;
-  text-shadow: 0px 0px 0 #d9d9d9, 1px 1px 0 #c1c1c1, 2px 2px 0 #a8a8a8, 3px 3px 0 #8f8f8f, 4px 4px 3px rgba(0, 0, 0, 0.6), 4px 4px 1px rgba(0, 0, 0, 0.5), 0px 0px 3px rgba(0, 0, 0, 0.2);
 }
 
 .service .line {
@@ -286,7 +290,7 @@ header .tablet {
   content: '';
   position: absolute;
   top: -10px;
-  left: -5px;
+  left: -15px;
   height: 128%;
   width: 1px;
   background-color: #ffffff;
@@ -410,6 +414,15 @@ header .tablet {
   border-radius: 40px;
   -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.portfolio-btn button:hover {
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 .data {
@@ -428,11 +441,11 @@ header .tablet {
   text-transform: uppercase;
   font-weight: 700;
   line-height: 30px;
+  font-weight: 400;
 }
 
 .data-text p b {
   font-weight: 700;
-  text-shadow: 0px 0px 0 #d9d9d9, 1px 1px 0 #c1c1c1, 2px 2px 0 #a8a8a8, 3px 3px 0 #8f8f8f, 4px 4px 3px rgba(0, 0, 0, 0.6), 4px 4px 1px rgba(0, 0, 0, 0.5), 0px 0px 3px rgba(0, 0, 0, 0.2);
 }
 
 .data .long-text {
@@ -557,8 +570,35 @@ header .tablet {
   color: #ffffff;
 }
 
+.about {
+  margin-top: 60px;
+}
+
+.about-description h3 {
+  font-size: 48px;
+  font-family: "Raleway", sans-serif;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-align: center;
+  color: #009c63;
+  margin-bottom: 20px;
+}
+
+.about-description p {
+  font-size: 18px;
+  font-family: "Raleway", sans-serif;
+  color: #000000;
+  line-height: 25px;
+  letter-spacing: 1.4;
+}
+
+.about-description p:nth-of-type(n+2) {
+  margin-top: 20px;
+}
+
 .team {
-  padding-top: 60px;
+  padding-top: 80px;
 }
 
 .team-title {
@@ -688,25 +728,36 @@ header .tablet {
   width: 620px;
   height: 50px;
   background-color: #ffffff;
+  border: 1px solid transparent;
   border-radius: 5px;
-  margin: 0 auto 20px;
+  margin: 20px auto 0;
   padding: 0 20px;
+}
+
+.question-form p {
+  font-size: 18px;
+  font-family: "Raleway", sans-serif;
+  color: #000000;
+  color: #ff0000;
+  display: none;
+  margin-top: 10px;
 }
 
 .question-form textarea {
   width: 620px;
   height: 150px;
   background-color: #ffffff;
+  border: 1px solid transparent;
   border-radius: 5px;
-  margin: 0 auto 20px;
+  margin: 20px auto 0;
   padding: 0 20px;
   padding: 10px 20px;
 }
 
 .question-form button {
   width: 180px;
-  height: 60px;
-  margin: 0 auto;
+  height: 50px;
+  margin: 30px auto 0;
   text-align: center;
   border: 1px solid #ffffff;
   background: transparent;
@@ -719,17 +770,11 @@ header .tablet {
 }
 
 .question-form button:hover {
-  -webkit-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
   color: #000000;
-  border: 1px solid #ffffff;
-}
-
-.question-form button:before {
-  background: #ffffff;
-  border: 1px solid #ffffff;
-  border-radius: 23px;
+  background-color: #ffffff;
 }
 
 .contacts-title {
@@ -813,10 +858,13 @@ header .tablet {
 
 @media (max-width: 1199px) {
   .service-text p {
-    font-size: 22px;
+    font-size: 18px;
+  }
+  .service .line:last-of-type:before {
+    left: -15px;
   }
   .data-text p {
-    font-size: 22px;
+    font-size: 18px;
   }
   .data .long-text {
     min-width: 100%;
@@ -830,6 +878,9 @@ header .tablet {
 }
 
 @media (max-width: 991px) {
+  .service-text p {
+    font-size: 22px;
+  }
   .service .line:before {
     display: none;
   }
@@ -850,6 +901,9 @@ header .tablet {
   }
   .portfolio-blocks_item img {
     max-width: 250px;
+  }
+  .data-text p {
+    font-size: 22px;
   }
   .partners-banner img {
     max-width: 100%;
@@ -881,6 +935,12 @@ header .tablet {
 }
 
 @media (max-width: 575px) {
+  .works-slider .slick-dots {
+    bottom: 10px;
+  }
+  .works-slider .slick-dots li button:before {
+    font-size: 6px;
+  }
   .service {
     padding-bottom: 20px;
   }

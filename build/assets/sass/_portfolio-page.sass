@@ -1,0 +1,96 @@
+.portfolio-page
+    &_title
+        text-align: center
+        margin: 100px 0
+        h1
+            @include title
+            color: $corporate-color
+    &_works
+        .left-work
+            margin-bottom: 50px
+            &_description
+                h3
+                    @include sub-title($corporate-color)
+                    font-weight: 700
+                    margin-bottom: 20px
+                p
+                    @include text
+                    line-height: 1.3em
+            &_slider
+                .slide
+                    height: 250px
+                    overflow: hidden
+                    img
+                        max-width: 100%
+                        margin: 0 auto
+                .slick-dots
+                    bottom: 0
+        .right-work
+            margin-bottom: 50px
+            &_description
+                h3
+                    @include sub-title($corporate-color)
+                    font-weight: 700
+                    margin-bottom: 20px
+                p
+                    @include text
+                    line-height: 1.3em
+            &_slider
+                .slide
+                    height: 250px
+                    overflow: hidden
+                    img
+                        max-width: 100%
+                        margin: 0 auto
+                .slick-dots
+                    bottom: 0
+
+@media (max-width: 991px)
+    .portfolio-page
+        &_title
+            margin: 60px 0
+        &_works
+            .left-work
+                &_description
+                    h3
+                        text-align: center
+                &_slider
+                    .slide
+                        img
+                            max-width: 80%
+            .right-work
+                &_description
+                    h3
+                        text-align: center
+                &_slider
+                    .slide
+                        img
+                            max-width: 80%
+
+@media (max-width: 575px)
+    .portfolio-page
+        &_works
+            .left-work
+                &_description
+                    p
+                        font-size: 16px
+            .right-work
+                &_description
+                    p
+                        font-size: 16px
+
+@media (max-width: 575px)
+    .portfolio-page
+        &_works
+            .left-work
+                &_slider
+                    .slide
+                        height: 200px
+                        img
+                            max-width: 100%
+            .right-work
+                &_slider
+                    .slide
+                        height: 200px
+                        img
+                            max-width: 100%

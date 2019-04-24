@@ -1,8 +1,9 @@
 @mixin nav
     font-family: $main-font
     color: $white
-    font-size: 18px
+    font-size: 20px
     font-weight: 700
+    letter-spacing: 1.5px
     text-transform: uppercase
 
 @mixin contact-btn
@@ -75,4 +76,8 @@
     border-radius: 5px
     margin: 20px auto 0
     padding: 0 20px
+
+@mixin social-btn($path)
+    background: url($path) center center no-repeat
+    background-size: contain
 

@@ -6,6 +6,7 @@ $mail->CharSet = 'utf-8';
 
 $name = $_POST['user_name'];
 $email = $_POST['user_email'];
+$company = $_POST['user_company'];
 $text = $_POST['user_text'];
 
 //$mail->SMTPDebug = 3;// Enable verbose debug output
@@ -29,7 +30,7 @@ $mail->addAddress('mike.farman@arthouselabs.com');               // Name is opti
 $mail->isHTML(true);                                  // Set email format to HTML
 
 $mail->Subject = 'Заявка с arthouselabs';
-$mail->Body    = '' .$name . ' оставил заявку, его почта ' .$email. '<br>Вопрос: ' .$text;
+$mail->Body    = '' .$name . ' оставил заявку, его почта: ' .$email. '<br>Компания: ' .$company. '<br>Вопрос: ' .$text;
 $mail->AltBody = '';
 
 if(!$mail->send()) {

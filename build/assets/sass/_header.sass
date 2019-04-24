@@ -4,45 +4,25 @@ header
     .header-logo
         img
             max-width: 250px
+            margin: auto
     .header-nav
-        padding-top: 26px
+        padding-top: 24px
         nav
             ul
+                display: flex
+                justify-content: flex-start
                 li
-                    display: inline-block
                     &:nth-of-type(n+2)
-                        margin-left: 20px
+                        margin-left: 50px
                     a
                         @include nav
                         transition: 0.3s
                         &:hover
                             color: $hover-text
-    .header-btn
-        text-align: right
-        padding-top: 14px
-        button
-            width: 140px
-            height: 40px
-            text-align: center
-            border: 1px solid $white
-            background: transparent
-            border-radius: 20px
-            @include contact-btn
-            &:hover
-                transition: .5s
-                color: $black
-                border: 1px solid $white
-            &:before
-                background: $white
-                border: 1px solid $white
-                border-radius: 20px
     .menu-btn
         display: none
     .tablet
         display: none
-
-.screen-wrapper
-    height: 100%
 
 @media (max-width: 1199px)
     header
@@ -53,12 +33,9 @@ header
             padding-top: 20px
             nav
                 ul
-                    margin-left: -100px
                     li
                         a
                             font-size: 18px
-        .header-btn
-            padding-top: 8px
 
 
 @media (max-width: 991px)
@@ -86,19 +63,19 @@ header
                 ul
                     margin-left: 0
                     text-align: center
+                    justify-content: center
+                    align-items: center
+                    flex-direction: column
                     li
-                        display: block
                         &:nth-of-type(n+2)
                             margin-left: 0
-                            margin-top: 20px
+                            margin-top: 50px
                         a
                             font-size: 22px
         .desktop
             display: none
         .tablet
             display: block
-        .header-btn
-            margin-top: 25px
         .menu-btn
             display: block
             margin-left: auto

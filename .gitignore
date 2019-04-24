@@ -172,6 +172,6 @@ $RECYCLE.BIN/
 *.lnk
 
 # PHP Mailer
-.phpmailer
+/phpmailer
 
 # End of https://www.gitignore.io/api/osx,node,windows,sublimetext
